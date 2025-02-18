@@ -2,6 +2,8 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
+const MAX_EMAILS = 5;
+
 export function Contact() {
   const [formData, setFormData] = useState({
     from_name: "",
@@ -9,21 +11,37 @@ export function Contact() {
     message: "",
   });
 
-  // Handle form submission
+
+  const getEmailsSentCount = () => {
+    return Number(localStorage.getItem("emailsSentCount")) || 0;
+  };
+
+
+  const incrementEmailsSentCount = () => {
+    const currentCount = getEmailsSentCount();
+    localStorage.setItem("emailsSentCount", currentCount + 1);
+  };
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (getEmailsSentCount() >= MAX_EMAILS) {
+      alert(`You have reached the maximum email sending limit of ${MAX_EMAILS} emails.`);
+      return;
+    }
+
     emailjs
       .sendForm(
-        "service_ur9w208",        // <-- Your service ID
-        "template_eq95l5h",       // <-- Your template ID
+        "service_ur9w208",
+        "template_eq95l5h",
         e.target,
-        "xTXfC0KHoiXVxY89r"       // <-- Your public key
+        "xTXfC0KHoiXVxY89r"
       )
       .then((result) => {
         alert("Message Sent!");
-        // Reset form fields
         setFormData({ from_name: "", reply_to: "", message: "" });
+        incrementEmailsSentCount();
       })
       .catch((error) => {
         console.error(error);
@@ -39,11 +57,11 @@ export function Contact() {
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Name (from_name) */}
+
           <div>
             <motion.input
               type="text"
-              name="from_name" // MUST match your EmailJS template variable
+              name="from_name"
               required
               value={formData.from_name}
               onChange={(e) =>
@@ -56,11 +74,11 @@ export function Contact() {
             />
           </div>
 
-          {/* Email (reply_to) */}
+
           <div>
             <motion.input
               type="email"
-              name="reply_to" // MUST match your EmailJS template variable
+              name="reply_to"
               required
               value={formData.reply_to}
               onChange={(e) =>
@@ -73,10 +91,10 @@ export function Contact() {
             />
           </div>
 
-          {/* Message */}
+
           <div>
             <motion.textarea
-              name="message" // MUST match your EmailJS template variable
+              name="message"
               required
               rows={5}
               value={formData.message}
@@ -90,7 +108,7 @@ export function Contact() {
             />
           </div>
 
-          {/* Submit Button */}
+
           <motion.button
             type="submit"
             className="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-6 rounded-lg font-medium hover:translate-y-[-2px] hover:shadow-xl transition duration-300"
