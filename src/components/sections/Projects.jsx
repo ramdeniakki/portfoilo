@@ -14,7 +14,7 @@ export const Projects = () => {
                         <div className="p-6 rounded-xl border border-white/20 hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-[0_4px_15px_rgba(0,255,255,0.1)] transition-all">
                             <h3 className="text-xl font-bold mb-2 text-cyan-400">TuneCraft</h3>
                             <p className="text-gray-400 mb-4">
-                                Developed a SaaS-based music queue management platform that allows users to create and manage collaborative song queues. The platform integrates Google OAuth authentication for seamless user login and access management.
+                            TuneCraft is a SaaS-based platform for managing collaborative music queues, allowing users to create, organize, and curate song playlists together. It features seamless Google OAuth authentication for secure user login and access management, providing a smooth and efficient way for users to collaborate on music selection while maintaining control over their queues.
                             </p>
                             <div className="flex flex-wrap gap-2 mb-4">
                                 {["NextJs", "TypeScript", "OAuth", "Prisma"].map((tech, key) => (
