@@ -29,7 +29,7 @@ export const Projects = () => {
                             </div>
                             <div className="flex justify-between items-center">
                                 <motion.a
-                                    href="https://github.com/yourusername/tune-craft"
+                                    href="https://github.com/ramdeniakki/TuneCraft"
                                     className="text-cyan-400 hover:text-cyan-300 transition-colors my-4"
                                     whileHover={{ scale: 1.05, color: "#00e5ff" }}
                                 >
@@ -57,7 +57,7 @@ export const Projects = () => {
                             </div>
                             <div className="flex justify-between items-center">
                                 <motion.a
-                                    href="https://github.com/yourusername/chat-app"
+                                    href="https://github.com/ramdeniakki/chat_app"
                                     className="text-pink-400 hover:text-pink-300 transition-colors my-4"
                                     whileHover={{ scale: 1.05, color: "#ff69b4" }}
                                 >
@@ -85,7 +85,7 @@ export const Projects = () => {
                             </div>
                             <div className="flex justify-between items-center">
                                 <motion.a
-                                    href="https://github.com/yourusername/draw-app"
+                                    href="https://github.com/ramdeniakki/draw-app"
                                     className="text-indigo-400 hover:text-indigo-300 transition-colors my-4"
                                     whileHover={{ scale: 1.05, color: "#4b0082" }}
                                 >
