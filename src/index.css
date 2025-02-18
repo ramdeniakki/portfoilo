@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: #0a0a0a;
+  color: #f3f4f6;
+}
+
+/* Adding the background styling with SVG pattern */
+.bg-amber-50 {
+  background-color: #fef3c7; /* Tailwind's amber-50 color */
+}
+
+.bg-amber-50.min-h-screen {
+  min-height: 100vh;
+}
+
+.bg-amber-50.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.bg-amber-50.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.bg-amber-50.lg\:px-28 {
+  @media (min-width: 1024px) {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+
+/* Adding inline background image to the container */
+.bg-amber-50.min-h-screen.py-16.px-10.lg\:px-28 {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'15\' height=\'15\' viewBox=\'0 0 20 20\'%3E%3Cg fill=\'none\' stroke=\'%23cfcfcf\' stroke-width=\'1\' stroke-opacity=\'0.4\' stroke-dasharray=\'2,1\'%3E%3Cpath d=\'M0 20L20 20M20 0L20 20M0 0L20 0M0 20L0 0\'/%3E%3C/g%3E%3C/svg%3E');
+  background-repeat: repeat;
+}
+
+@layer utilities {
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .animate-blink {
+    animation: blink 0.8s step-end infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
+  }
+
+  .animate-loading-bar {
+    animation: loading 0.8s ease infinite;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
