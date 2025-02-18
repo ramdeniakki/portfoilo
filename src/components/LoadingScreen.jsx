@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 export const LoadingScreen = ({ onComplete }) => {
   const [text, setText] = useState("");
   const fullText = "Full stack web developer";
-  const CHAR_DELAY = 100; // Faster typing effect
-  const COMPLETION_DELAY = 500; // Shorter delay after typing
+  const CHAR_DELAY = 100;
+  const COMPLETION_DELAY = 500;
 
   useEffect(() => {
     let index = 0;
@@ -21,7 +21,7 @@ export const LoadingScreen = ({ onComplete }) => {
     return () => clearInterval(interval);
   }, [onComplete]);
 
-  // Calculate total animation time in milliseconds
+  
   const totalTime = fullText.length * CHAR_DELAY + COMPLETION_DELAY;
 
   return (

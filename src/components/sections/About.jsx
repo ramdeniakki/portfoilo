@@ -36,9 +36,9 @@ export const About = () => {
               Passionate developer with expertise in building scalable web applications and creating innovative solutions.
             </p>
 
-            {/* Skills Grid */}
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Frontend Skills */}
+
               <div className="rounded-xl p-6 bg-gray-800 hover:bg-gray-700 transition-all">
                 <h3 className="text-xl font-bold mb-4 text-cyan-400">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
@@ -68,7 +68,7 @@ export const About = () => {
                 </div>
               </div>
 
-              {/* Database & ORM */}
+
               <div className="rounded-xl p-6 bg-gray-800 hover:bg-gray-700 transition-all">
                 <h3 className="text-xl font-bold mb-4 text-yellow-400">Database & ORM</h3>
                 <div className="flex flex-wrap gap-2">
@@ -83,7 +83,7 @@ export const About = () => {
                 </div>
               </div>
 
-              {/* DevOps & Tools */}
+
               <div className="rounded-xl p-6 bg-gray-800 hover:bg-gray-700 transition-all">
                 <h3 className="text-xl font-bold mb-4 text-green-400">DevOps & Tools</h3>
                 <div className="flex flex-wrap gap-2">
@@ -100,7 +100,7 @@ export const About = () => {
             </div>
           </div>
 
-          {/* Education & Work Experience */}
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             {/* Education */}
             <div className="p-6 rounded-xl border border-gray-700 hover:shadow-2xl transition-all">
