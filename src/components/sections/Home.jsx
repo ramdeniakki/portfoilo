@@ -43,7 +43,7 @@ export const Home = () => {
               </a>
 
               <a
-                href="public\File\resume.pdf"
+                href="https://drive.google.com/file/d/1jLk9A47zVUNx8928D2heF3pE8OHZVpZ1/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-cyan-500 text-cyan-500 py-3 px-6 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:bg-cyan-500 hover:text-white hover:shadow-xl"
