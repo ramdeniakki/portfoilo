@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
@@ -29,7 +28,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
                       menuOpen
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-5"
-                    }        
+                    }
             `}
       >
         Home
@@ -40,7 +39,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${
               menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }        
+            }
     `}
       >
         About
@@ -51,7 +50,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${
               menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }        
+            }
     `}
       >
         Projects
@@ -62,7 +61,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${
               menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }        
+            }
     `}
       >
         Contact
